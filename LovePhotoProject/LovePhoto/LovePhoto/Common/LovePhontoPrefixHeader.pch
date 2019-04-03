@@ -1,0 +1,55 @@
+//
+//  LovePhontoPrefixHeader.pch
+//  LovePhoto
+//
+//  Created by 黎应明 on 2019/4/2.
+//  Copyright © 2019年 黎应明. All rights reserved.
+//
+
+#ifndef LovePhontoPrefixHeader_pch
+#define LovePhontoPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define FullScreen   [[UIScreen mainScreen] bounds]
+#define PublicImage(imageName) [Tool imageInPublic:(imageName)]
+
+#define KHistorySearchPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"PYSearchhistories.plist"]
+#define KColor(r,g,b) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1.0]
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define UIColorFromRGBA(rgbValue, alphaValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(float)(alphaValue)]
+//版本校验判断是否正在进行苹果审核
+#define kShouldVerifyVersion @"kShouldVerifyVersion"
+//QQID
+#define QQKey @"1107953171"
+#define QQSecret @"4VYRjBPv4m34NAaF"
+//WeiXinkey值
+#define WeiXinKey @"wxae35cfa7371f1f31"
+//密钥
+#define WeiXinSecret @"cb540900c705f28af6b037a424ab6fcc"
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "LovePhoto-Swift.h"
+#import "MingLog.h"
+#import "Colours.h"
+#import "UIView+YYAdd.h"
+#import "MBProgressHUD.h"
+#import "KeychainWrapper.h"
+#import "SJAvatarBrowser.h"
+#import "IQKeyboardManager.h"
+#import "Tool.h"
+#import "UIColor+Hex.h"
+#import "HomePageViewController.h"
+#import "ChatViewController.h"
+#import <ShareSDK/ShareSDK.h>
+#import "JMWhenTapped.h"
+#import "HttpHelper.h"
+#endif
+
+
+#endif /* LovePhontoPrefixHeader_pch */
